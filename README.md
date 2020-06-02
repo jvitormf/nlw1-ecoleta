@@ -81,9 +81,13 @@ Click [here](https://www.figma.com/file/9TlOcj6l7D05fZhU12xWT3/Ecoleta-(Booster)
 
 To get a local copy up and running follow these simple steps.
 
+[:arrow_up: Back to top](#table-of-Contents)
+
 ## :clipboard: Prerequisites
 
 * Node.js - [Install guide](https://nodejs.org/en/download/package-manager/)
+
+[:arrow_up: Back to top](#table-of-Contents)
 
 ## :zap: Installation
 Run the commands below to install and run the app.
