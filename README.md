@@ -25,9 +25,9 @@
 <!-- TABLE OF CONTENTS -->
 # Table of Contents
 * [About the Project](#boom-about-the-project)
-  * [Built With](#gear-built-with)
-    * [Tools](#tools)
-    * [Technologies](#Technologies)
+* [Built With](#gear-built-with)
+  * [Tools](#tools)
+  * [Technologies](#Technologies)
 * [Getting Started](#rocket-getting-started)
   * [Prerequisites](#clipboard-prerequisites)
   * [Installation](#zap-installation)
