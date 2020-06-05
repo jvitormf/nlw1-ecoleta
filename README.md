@@ -86,6 +86,7 @@ To get a local copy up and running follow these simple steps.
 ## :clipboard: Prerequisites
 
 * Node.js - [Install guide](https://nodejs.org/en/download/package-manager/)
+* Yarn - [Install guide](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
 [:arrow_up: Back to top](#table-of-Contents)
 
