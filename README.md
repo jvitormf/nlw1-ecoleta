@@ -117,6 +117,18 @@ Run the commands below to install and run the app.
     #Install dependencies
     yarn start
    ```
+   
+   
+  ```sh
+    #Go to mobile folder
+    cd nlw1-ecoleta/mobile
+
+    #Install dependencies
+    yarn
+
+    #Install dependencies
+    yarn start
+   ```
 
 [:arrow_up: Back to top](#table-of-Contents)
 
