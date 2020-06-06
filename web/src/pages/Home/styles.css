@@ -20,6 +20,16 @@
   margin: 48px 0 0;
 }
 
+#page-home .items {
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+}
+
+#page-home .items img + img{
+  padding-left: 15px;
+}
+
 #page-home .content main {
   flex: 1;
   max-width: 560px;
