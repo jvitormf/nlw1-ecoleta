@@ -30,6 +30,7 @@ interface Item {
 interface Data {
   point: {
     image: string;
+    image_url: string;
     name: string;
     email: string;
     whatsapp: string;
@@ -39,6 +40,7 @@ interface Data {
   items: {
     id: number;
     title: string;
+    image_url: string;
   }[];
 }
 
@@ -92,18 +94,27 @@ const Detail = () => {
 
         <Image
           style={styles.pointImage}
-          source={{uri: data.point.image}}
+          source={{uri: data.point.image_url}}
         />
 
         <Text style={styles.pointName}>{data.point.name}</Text>
-        <Text style={styles.pointItems}>{data.items.map(item => item.title).join(', ')}</Text>
 
         <View style={styles.address}>
           <Text style={styles.addressTitle}>Endereço</Text>
           <Text style={styles.addressContent}>{`${data.point.city} / ${data.point.uf}`}</Text>
         </View>
-      </View>
 
+        <Text style={styles.itemsCollectTitle}>Ítens coletados</Text>
+
+      <View style={styles.itemsContainer}>
+        {data.items.map(item => (
+          <View key={item.id} style={[styles.item]}>
+            <SvgUri width={42} height={42} uri={item.image_url} />
+            <Text style={styles.itemTitle}>{item.title}</Text>
+          </View>
+        ))}
+      </View>
+      </View>
       <View style={styles.footer}>
         <RectButton style={styles.button} onPress={handleWhatsapp}>
           <FontAwesome name="whatsapp" size={20} color="#FFF" />
@@ -165,25 +176,35 @@ const styles = StyleSheet.create({
     color: '#6C6C80'
   },
 
+  itemsCollectTitle: {
+    marginTop: 25,
+    color: '#322153',
+    fontFamily: 'Roboto_500Medium',
+    fontSize: 16,
+  },
+
   itemsContainer: {
     flexDirection: 'row',
-    marginTop: 16,
-    marginBottom: 32,
+    flexWrap: 'wrap',
+    // justifyContent: 'flex-start',
+    marginTop: 10,
+    // marginBottom: 26,
+    // paddingLeft: 24,
   },
 
   item: {
     backgroundColor: '#fff',
     borderWidth: 2,
     borderColor: '#eee',
-    height: 120,
-    width: 120,
+    height: 100,
+    width: 100,
     borderRadius: 8,
-    paddingHorizontal: 16,
-    paddingTop: 20,
+    paddingHorizontal: 14,
+    paddingTop: 12,
     paddingBottom: 16,
-    marginRight: 8,
     alignItems: 'center',
     justifyContent: 'space-between',
+    margin: 2,
 
     textAlign: 'center',
   },
@@ -194,6 +215,7 @@ const styles = StyleSheet.create({
   },
 
   itemTitle: {
+    paddingTop: 2,
     fontFamily: 'Roboto_400Regular',
     textAlign: 'center',
     fontSize: 13,

@@ -45,7 +45,16 @@ export default class PointsController {
       .join('point_items', 'items.id', '=', 'point_items.item_id')
       .where('point_items.point_id', id);
 
-    return response.json({ point: serializedPoint, items });
+
+    const serializedItems = items.map(item => {
+      return {
+        id: item.id,
+        title: item.title,
+        image_url: `http://192.168.1.100:3333/uploads/${item.image}`,
+      }
+    });
+
+    return response.json({ point: serializedPoint, items: serializedItems });
   }
 
   async create(request: Request, response: Response) {
@@ -65,7 +74,7 @@ export default class PointsController {
     const point = {
       image: request.file
         ? request.file.filename
-        : '',
+        : null,
       name,
       email,
       whatsapp,

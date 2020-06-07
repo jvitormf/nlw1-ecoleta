@@ -6,7 +6,8 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
-  Alert
+  Alert,
+  ActivityIndicator,
 } from "react-native";
 import Constants from "expo-constants";
 import { Feather as Icon } from "@expo/vector-icons";
@@ -26,6 +27,7 @@ interface Point {
   id: number;
   name: string;
   image: string;
+  image_url: string;
   latitude: number;
   longitude: number;
 }
@@ -118,7 +120,7 @@ const Points = () => {
       <Text style={styles.description}>Encontre no mapa um ponto de coleta.</Text>
 
       <View style={styles.mapContainer}>
-        {initialPosition[0] !== 0 && (
+        {initialPosition[0] !== 0 ? (
           <MapView
             style={styles.map}
             loadingEnabled={initialPosition[0] === 0}
@@ -142,13 +144,19 @@ const Points = () => {
                 <View style={styles.mapMarkerContainer}>
                   <Image
                     style={styles.mapMarkerImage}
-                    source={{uri: point.image}}
+                    source={{uri: point.image_url}}
                   />
                   <Text style={styles.mapMarkerTitle}>{point.name}</Text>
                 </View>
               </Marker>
             ))}
           </MapView>
+        ) : (
+          <ActivityIndicator
+            size="large"
+            color="#34CB79"
+            style={{flex: 1, alignSelf: "center"}}
+          />
         )}
       </View>
       <View style={styles.itemsContainer}>
