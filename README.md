@@ -31,12 +31,12 @@
 * [Getting Started](#rocket-getting-started)
   * [Prerequisites](#clipboard-prerequisites)
   * [Installation](#zap-installation)
-* [License](#memo-license)
 * [Contributing](#bulb-contributing)
+* [Usage](#usage)
+* [License](#memo-license)
 * [Contact](#e-mail-contact)
 * [Acknowledgements](#exclamation-acknowledgements)
-<!-- * [Usage](#usage)
-* [Roadmap](#arrows_clockwise-roadmap) -->
+<!-- * [Roadmap](#arrows_clockwise-roadmap) -->
 
 <!-- ABOUT THE PROJECT -->
 # :boom: About The Project
@@ -54,7 +54,8 @@ Ecoleta it's an app to connect people to companies that collect organic or inorg
 * Users will be able to:
   * Inform their location in order to locate the companies nearby;
   * Filter by type of waste;
-  * See the information about the company selected;
+  * See the information about the selected company;
+***
 
 # :gear: Built With
   ## Tools
@@ -70,18 +71,18 @@ Ecoleta it's an app to connect people to companies that collect organic or inorg
   * [Expo](https://expo.io/)
 
   [:arrow_up: Back to top](#table-of-Contents)
+  ***
 
 # :fireworks: Layout
 Click [here](https://www.figma.com/file/9TlOcj6l7D05fZhU12xWT3/Ecoleta-(Booster)?node-id=0%3A1) to see the web and mobile layout of this app.
 
   [:arrow_up: Back to top](#table-of-Contents)
+  ***
 
 <!-- GETTING STARTED -->
 # :rocket: Getting Started
 
 To get a local copy up and running follow these simple steps.
-
-[:arrow_up: Back to top](#table-of-Contents)
 
 ## :clipboard: Prerequisites
 
@@ -89,6 +90,7 @@ To get a local copy up and running follow these simple steps.
 * Yarn - [Install guide](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
 [:arrow_up: Back to top](#table-of-Contents)
+***
 
 ## :zap: Installation
 Run the commands below to install and run the app.
@@ -103,6 +105,12 @@ Run the commands below to install and run the app.
 
     #Install dependencies
     yarn
+
+    #Create database
+    yarn knex:migrate
+
+    #Seed database
+    yarn knex:seed
 
     #Start the server
     yarn dev
@@ -132,6 +140,7 @@ Run the commands below to install and run the app.
    ```
 
 [:arrow_up: Back to top](#table-of-Contents)
+***
 
 <!-- CONTRIBUTING -->
 # :bulb: Contributing
@@ -145,14 +154,22 @@ Any contributions you make are **greatly appreciated**.
 5. Open a Pull Request
 
 [:arrow_up: Back to top](#table-of-Contents)
+***
 
 <!-- USAGE EXAMPLES -->
-<!-- # Usage
+# Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Usage demonstration of the web version.
 
-_For more examples, please refer to the [Documentation](https://example.com)_ -->
+![](./.github/web.gif)
+<!-- <img src="./.github/web.gif" width="1080" height="555"/> -->
 
+Usage demonstration of the mobile version.
+
+<img src="./.github/mobile.gif" width="270" height="555"/>
+
+<!-- ![](./.github/mobile.gif) -->
+***
 
 <!-- LICENSE -->
 # :memo: License
@@ -160,7 +177,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 Distributed under the MIT License. See [LICENSE](LICENSE.md) for more information.
 
 [:arrow_up: Back to top](#table-of-Contents)
-
+***
 
 <!-- CONTACT -->
 # :e-mail: Contact
@@ -170,7 +187,7 @@ João Vitor - <j.vitor.mf@gmail.com>
 LinkedIn - <https://www.linkedin.com/in/jvitormf/>
 
 [:arrow_up: Back to top](#table-of-Contents)
-
+***
 
 <!-- ACKNOWLEDGEMENTS -->
 # :exclamation: Acknowledgements
@@ -179,3 +196,4 @@ LinkedIn - <https://www.linkedin.com/in/jvitormf/>
 * [Rocketseat]()
 
 [:arrow_up: Back to top](#table-of-Contents)
+***
